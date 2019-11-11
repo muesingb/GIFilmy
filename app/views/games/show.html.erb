@@ -1,0 +1,10 @@
+<% @game.game_questions.each do |game_question| %>
+    <img src="<%= game_question.question.first_gif %>" alt="" height="600" width="600">
+    <img src="<%= game_question.question.second_gif %>" alt="" height="600" width="600">
+    <%= form_with(url: "/answer", method: "post") do %>
+        <%= text_field_tag(:answer) %><br />
+        <%= submit_tag("Answer") %>
+    <% end %>
+<% end %>
+
+Your Score: <%= session[:score] || 0 %>

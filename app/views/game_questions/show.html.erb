@@ -1,8 +1,0 @@
-<img src="<%= @gamequestion.question.first_gif %>" alt="" height="600" width="600">
-<img src="<%= @gamequestion.question.second_gif %>" alt="" height="600" width="600">
-
-<%= form_for @gamequestion do |f| %>
-    <%= f.text_field :correct %><br />
-  
-    <%= f.submit :Answer %>
-<% end %>
