@@ -5,3 +5,4 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Question.create(title: "Singing in the Rain", first_gif: "https://media.giphy.com/media/143qWPF33HtSTK/giphy.gif", second_gif: "https://media.giphy.com/media/1Yfxps0AHRYBR2tK2G/giphy.gif", genre: "Musical")
