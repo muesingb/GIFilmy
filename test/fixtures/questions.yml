@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  genre: MyString
+  first_gif: MyString
+  second_gif: MyString
+  title: MyString
+
+two:
+  genre: MyString
+  first_gif: MyString
+  second_gif: MyString
+  title: MyString
