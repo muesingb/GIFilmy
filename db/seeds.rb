@@ -11,4 +11,5 @@ Question.create(title: "Singing in the Rain", first_gif: "https://media.giphy.co
 
 Game.create(score: 10)
 
+#Game 1
 GameQuestion.create(question_id: 1, game_id: 1)
