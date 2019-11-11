@@ -24,14 +24,35 @@ Question.create(title: "Office Space", genre: "Comedy", first_gif: "https://medi
 Question.create(title: "Anchorman", genre: "Comedy", first_gif: "http://giphygifs.s3.amazonaws.com/media/1e2RyYMVRCE1y/giphy.gif", second_gif: "https://media.giphy.com/media/dsQrzqmtwYnobTQBDW/giphy.gif")
 Question.create(title: "Groundhog Day", genre: "Comedy", first_gif: "https://media.giphy.com/media/lNUCXNHGH7Gog/giphy.gif", second_gif: "https://media.giphy.com/media/3ROGCp62zakRW/giphy.gif")
 Question.create(title: "Wayne's World", genre: "Comedy", first_gif: "https://media.giphy.com/media/l41lZccR1oUigYeNa/giphy.gif", second_gif: "https://media.giphy.com/media/euwvytHJqMG21wSkI4/giphy.gif")
-Question.create(title: "Fight Club", genre: "Drama", first_gif: "http://giphygifs.s3.amazonaws.com/media/rcRwO8GMSfNV6/giphy.gif", second_gif: "https://media.giphy.com/media/l41JUhcCreHloiiru/giphy.gif")
-Question.create(title: "Fight Club", genre: "Drama", first_gif: "http://giphygifs.s3.amazonaws.com/media/rcRwO8GMSfNV6/giphy.gif", second_gif: "https://media.giphy.com/media/l41JUhcCreHloiiru/giphy.gif")
+Question.create(title: "Home Alone", genre: "Comedy", first_gif: "https://media.giphy.com/media/l0IylQoMkcbZUbtKw/giphy.gif", second_gif: "https://media.giphy.com/media/gKW26O7cU2JDG/giphy.gif")
+Question.create(title: "School of Rock", genre: "Comedy", first_gif: "https://media.giphy.com/media/j39AzlvlJqE7e/giphy.gif", second_gif: "https://media.giphy.com/media/QLvRBqfLXCphu/giphy.gif")
 
 
 
 
 Game.create(score: 10)
+Game.create(score: 0) 
 
 #Game 1
 GameQuestion.create(question_id: 1, game_id: 1)
 GameQuestion.create(question_id: 2, game_id: 1)
+GameQuestion.create(question_id: 3, game_id: 1)
+GameQuestion.create(question_id: 4, game_id: 1)
+GameQuestion.create(question_id: 5, game_id: 1)
+GameQuestion.create(question_id: 6, game_id: 1)
+GameQuestion.create(question_id: 7, game_id: 1)
+GameQuestion.create(question_id: 8, game_id: 1)
+GameQuestion.create(question_id: 9, game_id: 1)
+GameQuestion.create(question_id: 10, game_id: 1)
+GameQuestion.create(question_id: 11, game_id: 2)
+GameQuestion.create(question_id: 12, game_id: 2)
+GameQuestion.create(question_id: 13, game_id: 2)
+GameQuestion.create(question_id: 14, game_id: 2)
+GameQuestion.create(question_id: 15, game_id: 2)
+GameQuestion.create(question_id: 16, game_id: 2)
+GameQuestion.create(question_id: 17, game_id: 2)
+GameQuestion.create(question_id: 18, game_id: 2)
+GameQuestion.create(question_id: 19, game_id: 2)
+GameQuestion.create(question_id: 20, game_id: 2)
+
+
