@@ -9,21 +9,22 @@ class GamesController < ApplicationController
     end
 
     def answer
+        byebug
         #flash[:correct] == question.title
         #if game_params[:answer] == question.title
-        if game_params[:answer] == session[:answer]
-            if session[:score]
-              session[:score] = session[:score] + 100
-            else
-              session[:score] = 0
-            end
-        end
-        redirect_to '/'
+        # if game_params[:answer] == session[:answer]
+        #     if session[:score]
+        #       session[:score] = session[:score] + 100
+        #     else
+        #       session[:score] = 0
+        #     end
+        # end
+        # redirect_to '/'
     end
 
 private
 
     def game_params
-        params.permit(:answer)
+        params.require(:game).permit(:answer, :game_id, :score)
     end
 end
