@@ -13,3 +13,4 @@ Game.create(score: 10)
 
 #Game 1
 GameQuestion.create(question_id: 1, game_id: 1)
+GameQuestion.create(question_id: 2, game_id: 1)
