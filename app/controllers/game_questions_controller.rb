@@ -1,5 +1,10 @@
 class GameQuestionsController < ApplicationController
     def show
-        @gamequestion = gamequestion.new
+        Game.start_game
+        @gamequestion = GameQuestion.find(params[:id])
+    end
+
+    def answer
+
     end
 end
