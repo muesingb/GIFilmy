@@ -7,3 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Question.create(genre: "science fiction", title: :"Star Wars", first_gif: "https://media.giphy.com/media/3o7buijTqhjxjbEqjK/giphy.gif", second_gif: "http://giphygifs.s3.amazonaws.com/media/9umH7yTO8gLYY/giphy.gif")
+Question.create(title: "Singing in the Rain", first_gif: "https://media.giphy.com/media/143qWPF33HtSTK/giphy.gif", second_gif: "https://media.giphy.com/media/1Yfxps0AHRYBR2tK2G/giphy.gif", genre: "Musical")
