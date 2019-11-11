@@ -1,5 +1,5 @@
 class GameQuestionsController < ApplicationController
     def show
-        @gamequestion = gamequestion.new
+        @gamequestion = GameQuestion.find(params[:id])
     end
 end
