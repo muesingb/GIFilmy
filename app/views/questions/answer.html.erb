@@ -1,0 +1,9 @@
+<h1><%= flash[:correct] %></h1>
+<h2>You got it <%= flash[:feedback] %></h2>
+
+<img src="<%=@question.values.third%>" alt="" height="600" width="600">
+<img src="<%=@question.values.fourth%>" alt="" height="600" width="600">
+<br /><br />    
+<%= link_to submit_tag("Continue"), "/game/#{@game_id}/question/#{@next_question}" %>
+
+Your Score: <%= session[:score] || 0 %>
