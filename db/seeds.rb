@@ -27,9 +27,6 @@ Question.create(title: "Wayne's World", genre: "Comedy", first_gif: "https://med
 Question.create(title: "Home Alone", genre: "Comedy", first_gif: "https://media.giphy.com/media/l0IylQoMkcbZUbtKw/giphy.gif", second_gif: "https://media.giphy.com/media/gKW26O7cU2JDG/giphy.gif")
 Question.create(title: "School of Rock", genre: "Comedy", first_gif: "https://media.giphy.com/media/j39AzlvlJqE7e/giphy.gif", second_gif: "https://media.giphy.com/media/QLvRBqfLXCphu/giphy.gif")
 
-
-
-
 Game.create(score: 10)
 Game.create(score: 0) 
 
@@ -55,4 +52,7 @@ GameQuestion.create(question_id: 18, game_id: 2)
 GameQuestion.create(question_id: 19, game_id: 2)
 GameQuestion.create(question_id: 20, game_id: 2)
 
-
+User.create(name: "Brad", favorite_movie: "The Big Lebowski", gif_that_represents_you: "https://media.giphy.com/media/hcd9ZPh0sb3IA/giphy.gif")
+User.create(name: "Barbara", favorite_movie: "Snatch", gif_that_represents_you: "https://media.giphy.com/media/dvDCHPFnxnYubsrNvl/giphy.gif")
+User.create(name: "Yoan", favorite_movie: "Back to the Future", gif_that_represents_you: "https://media.giphy.com/media/xT1XGzXhVgWRLN1Cco/giphy.gif")
+User.create(name: "Tony", favorite_movie: "Ferris Bueller's Day Off", gif_that_represents_you: "https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif")

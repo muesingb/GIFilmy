@@ -37,6 +37,8 @@ ActiveRecord::Schema.define(version: 2019_11_11_150849) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
+    t.string "favorite_movie"
+    t.string "gif_that_represents_you"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
