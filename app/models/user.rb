@@ -1,5 +1,6 @@
 class User < ApplicationRecord
 
+
     has_many :games
 
 def password=(new_password)
@@ -13,5 +14,6 @@ def password=(new_password)
     hashed = BCrypt::Engine::hash_secret(password, salt)
     return nil unless (salt + hashed) == self.password_digest
   end
+
 
 end

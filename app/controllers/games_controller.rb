@@ -1,21 +1,29 @@
 class GamesController < ApplicationController
-    def index
+    def intro
+        render :'index'
+    end
+
+    def create
+        @game = Game.create(user_id: user_params[:user_id])
+        @game.questions << Question.all.sample
+        redirect_to "/game/#{@game.id}/question/#{@game.questions.first.id}"
     end
 
     def game_questions
         @game = Game.find(params[:game_id])
         @question = @game.questions.find(params[:id])
-
         render :'questions/show'
     end
 
-    def get_answer
+    def answer
         #adds to score, redirects to answer page, 
         #answer page redirects to next question's show page
+        @game = Game.find(game_params[:game_id])
+        @game.get_score
         if game_params[:answer] == question_params[:title]
             flash[:feedback] = "Right!"
             if session[:score]
-                session[:score] = session[:score] + 100
+                session[:score] = session[:score] + 10
             else
                 session[:score] = 0
             end
@@ -36,6 +44,9 @@ class GamesController < ApplicationController
         render :'questions/answer'
     end
 
+    def end_game
+    end
+
 private
 
     def game_params
@@ -44,5 +55,9 @@ private
 
     def question_params
         params.require(:question).permit(:title, :question_id)
+    end
+
+    def user_params
+        params.require(:user).permit(:user_id)
     end
 end

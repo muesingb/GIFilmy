@@ -1,6 +1,6 @@
-<img src="<%= @question.first_gif %>" alt="" height="600" width="600">
-<img src="<%= @question.second_gif %>" alt="" height="600" width="600">
-<%= form_with(url: "/get_answer", method: "post") do %>
+<img src="<%= @question.first_gif %>" alt="a hilarious GIF" height="600" width="600">
+<img src="<%= @question.second_gif %>" alt="a hilarious GIF" height="600" width="600">
+<%= form_with(url: "/answer", method: "post") do %>
     <%= text_field_tag "game[answer]" %><br />
     <%= hidden_field_tag "game[game_id]", @game.id%>
     <%= hidden_field_tag "game[score]", @game.score%>
