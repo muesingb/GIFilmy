@@ -1,11 +1,10 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#users
+User.create(name: "Brad", favorite_movie: "The Big Lebowski", gif_that_represents_you: "https://media.giphy.com/media/hcd9ZPh0sb3IA/giphy.gif")
+User.create(name: "Barbara", favorite_movie: "Snatch", gif_that_represents_you: "https://media.giphy.com/media/dvDCHPFnxnYubsrNvl/giphy.gif")
+User.create(name: "Yoan", favorite_movie: "Back to the Future", gif_that_represents_you: "https://media.giphy.com/media/xT1XGzXhVgWRLN1Cco/giphy.gif")
+User.create(name: "Tony", favorite_movie: "Ferris Bueller's Day Off", gif_that_represents_you: "https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif")
 
+#questions
 Question.create(title: "Star Wars", genre: "Science Fiction", first_gif: "https://media.giphy.com/media/3o7buijTqhjxjbEqjK/giphy.gif", second_gif: "http://giphygifs.s3.amazonaws.com/media/9umH7yTO8gLYY/giphy.gif")
 Question.create(title: "Singin' in the Rain", genre: "Musical", first_gif: "https://media.giphy.com/media/143qWPF33HtSTK/giphy.gif", second_gif: "https://media.giphy.com/media/1Yfxps0AHRYBR2tK2G/giphy.gif")
 Question.create(title: "Citizen Kane", genre: "Drama", first_gif: "https://media.giphy.com/media/5ME9j9hbSJYrK/giphy.gif", second_gif: "https://media.giphy.com/media/LXjFLBeyIzXUs/giphy.gif")
@@ -27,8 +26,9 @@ Question.create(title: "Wayne's World", genre: "Comedy", first_gif: "https://med
 Question.create(title: "Home Alone", genre: "Comedy", first_gif: "https://media.giphy.com/media/l0IylQoMkcbZUbtKw/giphy.gif", second_gif: "https://media.giphy.com/media/gKW26O7cU2JDG/giphy.gif")
 Question.create(title: "School of Rock", genre: "Comedy", first_gif: "https://media.giphy.com/media/j39AzlvlJqE7e/giphy.gif", second_gif: "https://media.giphy.com/media/QLvRBqfLXCphu/giphy.gif")
 
-Game.create(score: 10)
-Game.create(score: 0) 
+#Games
+Game.create(user_id: 1)
+Game.create(user_id:1) 
 
 #Game 1
 GameQuestion.create(question_id: 1, game_id: 1)
@@ -41,6 +41,8 @@ GameQuestion.create(question_id: 7, game_id: 1)
 GameQuestion.create(question_id: 8, game_id: 1)
 GameQuestion.create(question_id: 9, game_id: 1)
 GameQuestion.create(question_id: 10, game_id: 1)
+
+#Game 2
 GameQuestion.create(question_id: 11, game_id: 2)
 GameQuestion.create(question_id: 12, game_id: 2)
 GameQuestion.create(question_id: 13, game_id: 2)
@@ -51,8 +53,3 @@ GameQuestion.create(question_id: 17, game_id: 2)
 GameQuestion.create(question_id: 18, game_id: 2)
 GameQuestion.create(question_id: 19, game_id: 2)
 GameQuestion.create(question_id: 20, game_id: 2)
-
-User.create(name: "Brad", favorite_movie: "The Big Lebowski", gif_that_represents_you: "https://media.giphy.com/media/hcd9ZPh0sb3IA/giphy.gif")
-User.create(name: "Barbara", favorite_movie: "Snatch", gif_that_represents_you: "https://media.giphy.com/media/dvDCHPFnxnYubsrNvl/giphy.gif")
-User.create(name: "Yoan", favorite_movie: "Back to the Future", gif_that_represents_you: "https://media.giphy.com/media/xT1XGzXhVgWRLN1Cco/giphy.gif")
-User.create(name: "Tony", favorite_movie: "Ferris Bueller's Day Off", gif_that_represents_you: "https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif")
