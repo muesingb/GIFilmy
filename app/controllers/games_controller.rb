@@ -11,7 +11,7 @@ class GamesController < ApplicationController
 
     def get_answer
         #adds to score, redirects to answer page, 
-        #answer page will redirect to next question's show page
+        #answer page redirects to next question's show page
         if game_params[:answer] == question_params[:title]
             flash[:feedback] = "Right!"
             if session[:score]
@@ -23,8 +23,6 @@ class GamesController < ApplicationController
         end
 
         flash[:correct] = question_params[:title]
-        #flash[:game_id] = game_params[:game_id]
-        #flash[:next_question] = (question_params[:question_id]).to_i + 1
         flash[:game] = Game.find(game_params[:game_id])
         flash[:question] = Question.find(question_params[:question_id])
        
@@ -32,12 +30,10 @@ class GamesController < ApplicationController
     end
 
     def show_answer
-        #@game_id = flash[:game_id]
         @next_question = (flash[:question].values.first.to_i) + 1
         @game_id = flash[:game].values.first
         @question = flash[:question]
         render :'questions/answer'
-        #redirect_to question_params[:id]+1
     end
 
 private
