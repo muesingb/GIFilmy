@@ -1,0 +1,12 @@
+<img src="<%= @question.first_gif %>" alt="" height="600" width="600">
+<img src="<%= @question.second_gif %>" alt="" height="600" width="600">
+<%= form_with(url: "/get_answer", method: "post") do %>
+    <%= text_field_tag "game[answer]" %><br />
+    <%= hidden_field_tag "game[game_id]", @game.id%>
+    <%= hidden_field_tag "game[score]", @game.score%>
+    <%= hidden_field_tag "question[title]", @question.title%>
+    <%= hidden_field_tag "question[question_id]", @question.id%>
+    <%= submit_tag("Answer") %>
+<% end %>
+
+Your Score: <%= session[:score] || 0 %>
