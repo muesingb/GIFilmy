@@ -7,5 +7,9 @@ resources :questions
 post '/answer', to: 'games#answer'
 get '/show_answer', to: 'games#show_answer'
 get '/game/:game_id/question/:id', to: 'games#game_questions'
+resources :questions
+get '/login', to: 'sessions#new'
+post '/login', to: 'sessions#create'
+post '/logout', to: 'sessions#destroy'
 get '/game/end', to: 'games#end_game'
 end
