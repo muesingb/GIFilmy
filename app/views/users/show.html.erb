@@ -2,3 +2,7 @@
 <h2>Favorite Movie: <%= @user.favorite_movie %></h2>
 <h2>Gif That Best Represents You: <p><img src="<%= @user.gif_that_represents_you %>" alt="" height="600" width="600"></p> 
 
+<%= form_with(url: "/games", method: "post") do %>
+    <%= hidden_field_tag "user[user_id]", @user.id%>
+    <%= submit_tag("Start a new game?") %>
+<% end %>
