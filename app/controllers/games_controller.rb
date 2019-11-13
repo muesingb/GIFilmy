@@ -25,10 +25,17 @@ class GamesController < ApplicationController
         #answer page redirects to next question's show page
         @game = Game.find(game_params[:game_id])
         @game_question = @game.game_questions.last
-        if game_params[:answer] == question_params[:title]
-            flash[:feedback] = "Right!"
+        @question = Question.find_by(title: question_params[:title])
+        @simple_answer = @question.simplify_title
+        
+        #complicated_answer = game_params.split(" ")
+        #stopwords = /\b(?:#{ %w[to and or the a in of].join('|') })\b/i
+        #user_answer_simple = complicated_answer.join(' ').gsub(stopwords, '').split.map {|word| word.downcase}
+        
+        if user_answer_simple == @simple_answer
+            flash[:feedback] = "🎊Way to go!🎉"
             @game_question.update(correct: true)
-        else flash[:feedback] = "Wrong!"
+        else flash[:feedback] = "NOPE sorry! 😢"
         end
 
         flash[:correct] = question_params[:title]
@@ -43,7 +50,7 @@ class GamesController < ApplicationController
         @game = Game.find(@game_id)
 
         unless @game.game_over? 
-            @game.questions << Question.all.sample
+            @game.get_unique_question   
         end
 
         @next_question = @game.questions[-1].id
@@ -52,7 +59,8 @@ class GamesController < ApplicationController
         render :'questions/answer'
     end
 
-    def end_game
+    def leaderboard
+        #@game_scores = (Game.all.map {|game| game.score}).sort.reverse
     end
 
 private

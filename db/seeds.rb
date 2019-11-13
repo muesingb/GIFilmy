@@ -6,7 +6,7 @@ User.create(name: "Tony", favorite_movie: "Ferris Bueller's Day Off", gif_that_r
 
 #questions
 Question.create(title: "Star Wars", genre: "Science Fiction", first_gif: "https://media.giphy.com/media/3o7buijTqhjxjbEqjK/giphy.gif", second_gif: "http://giphygifs.s3.amazonaws.com/media/9umH7yTO8gLYY/giphy.gif")
-Question.create(title: "Singin' in the Rain", genre: "Musical", first_gif: "https://media.giphy.com/media/143qWPF33HtSTK/giphy.gif", second_gif: "https://media.giphy.com/media/1Yfxps0AHRYBR2tK2G/giphy.gif")
+Question.create(title: "Singing in the Rain", genre: "Musical", first_gif: "https://media.giphy.com/media/143qWPF33HtSTK/giphy.gif", second_gif: "https://media.giphy.com/media/1Yfxps0AHRYBR2tK2G/giphy.gif")
 Question.create(title: "Citizen Kane", genre: "Drama", first_gif: "https://media.giphy.com/media/5ME9j9hbSJYrK/giphy.gif", second_gif: "https://media.giphy.com/media/LXjFLBeyIzXUs/giphy.gif")
 Question.create(title: "Casablanca", genre: "Drama", first_gif: "https://media.giphy.com/media/l2SpVMDEIJvjwavwQ/giphy.gif", second_gif: "https://media.giphy.com/media/xTdAjr0aZ8PcSAGTqE/giphy.gif")
 Question.create(title: "The Rocky Horror Picture Show", genre: "Musical", first_gif: "https://media.giphy.com/media/26tPcgtbhhbU88U2A/giphy.gif", second_gif: "https://media.giphy.com/media/zXeX29w6jxjAk/giphy.gif")

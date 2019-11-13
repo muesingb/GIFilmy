@@ -3,12 +3,14 @@ class Game < ApplicationRecord
     has_many :questions, through: :game_questions
     belongs_to :user
 
-    # def self.start_game
-    #     @new_game = Game.create(score: 0)
-    #     10.times do |t|
-    #         GameQuestion.create(game_id:@new_game, question_id: rand(1..2))
-    #     end
-    # end
+    def get_unique_question
+        question = Question.all.sample
+        if self.questions.include?(question)
+            get_unique_question
+        else 
+            self.questions << question
+        end 
+    end 
 
     def get_score 
         score = self.game_questions.select {|gq| gq.correct == true}.count
@@ -16,6 +18,7 @@ class Game < ApplicationRecord
     end 
 
     def game_over?
-        self.questions.count > 10
+        self.questions.count > 5
     end 
 end
+   
