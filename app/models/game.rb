@@ -14,6 +14,6 @@ class Game < ApplicationRecord
     end 
 
     def game_over?
-        self.questions.count > 10
+        self.questions.count >= 10
     end 
 end

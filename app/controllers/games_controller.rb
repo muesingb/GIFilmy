@@ -12,7 +12,12 @@ class GamesController < ApplicationController
     def game_questions
         @game = Game.find(params[:game_id])
         @question = @game.questions.find(params[:id])
-        render :'questions/show'
+        if @game.game_over?
+            render :'games/game_over'
+        else 
+            @game.questions << Question.all.sample
+            render :'questions/show'
+        end
     end
 
     def answer
@@ -38,8 +43,9 @@ class GamesController < ApplicationController
     end
 
     def show_answer
-        @next_question = (flash[:question].values.first.to_i) + 1
         @game_id = flash[:game].values.first
+        @game = Game.find(@game_id)
+        @next_question = @game.questions.last.id
         @question = flash[:question]
         render :'questions/answer'
     end
