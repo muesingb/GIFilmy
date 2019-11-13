@@ -18,9 +18,9 @@ class UsersController < ApplicationController
  
 private
  
-  def user_params
-    params.require(:user).permit(:name, :favorite_movie, :gif_that_represents_you)
-  end
+    def user_params
+        params.require(:user).permit(:name, :favorite_movie, :gif_that_represents_you)
+    end
 
   #:password, :password_confirmation
 end
