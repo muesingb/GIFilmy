@@ -11,7 +11,8 @@ class Game < ApplicationRecord
     # end
 
     def get_score 
-        self.game_questions.select {|gq| gq.correct == true}.count
+        score = self.game_questions.select {|gq| gq.correct == true}.count
+        self.update(score: score)
     end 
 
     def game_over?

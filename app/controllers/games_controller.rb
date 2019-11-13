@@ -15,6 +15,7 @@ class GamesController < ApplicationController
         if @game.game_over?
             render :'games/game_over'
         else 
+            @game.get_score
             render :'questions/show'
         end
     end
@@ -23,14 +24,10 @@ class GamesController < ApplicationController
         #adds to score, redirects to answer page, 
         #answer page redirects to next question's show page
         @game = Game.find(game_params[:game_id])
-        @game.get_score
+        @game_question = @game.game_questions.last
         if game_params[:answer] == question_params[:title]
             flash[:feedback] = "Right!"
-            if session[:score]
-                session[:score] = session[:score] + 10
-            else
-                session[:score] = 0
-            end
+            @game_question.update(correct: true)
         else flash[:feedback] = "Wrong!"
         end
 
