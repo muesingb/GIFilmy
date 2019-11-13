@@ -1,12 +1,12 @@
 <%= form_for @user do |f| %>
   <%= f.label :name %>:
-  <%= f.text_field :name %><br />
+  <%= f.text_field :name, required: true %><br />
 
   <%= f.label "Favorite Movie" %>:
-  <%= f.text_field :favorite_movie %><br />
+  <%= f.text_field :favorite_movie, required: true %><br />
   
-  <%= f.label "GIF that represents you" %>:
-  <%= f.text_field :gif_that_represents_you %><br />
+  GIF that represents you:
+  <%= f.text_field :gif_that_represents_you, required: true %><br />
 
   <!--<%= f.label :password %>:
   <%= f.password_field :password %><br />
