@@ -3,3 +3,5 @@
 <% @users.each do |user| %>
 <p><%= link_to user.name, user_path(user) %></p>
 <% end %>
+
+<%= link_to 'Create a New User', new_user_path %>

@@ -1,6 +1,18 @@
-<%= form_for :user, url: '/users' do |f| %>
-  Username: <%= f.text_field :username %>
-  Password: <%= f.password_field :password %>
-  Password Confirmation: <%= f.password_field :password_confirmation %>
-  <%= f.submit "Submit" %>
-<% end %> 
+<%= form_for @user do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
+
+  <%= f.label "Favorite Movie" %>:
+  <%= f.text_field :favorite_movie %><br />
+  
+  <%= f.label "GIF that represents you" %>:
+  <%= f.text_field :gif_that_represents_you %><br />
+
+  <!--<%= f.label :password %>:
+  <%= f.password_field :password %><br />
+
+  <%= f.label :password %>:
+  <%= f.password_field :password_confirmation %><br />-->
+
+  <%= f.submit %>
+<% end %>
