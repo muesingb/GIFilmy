@@ -11,9 +11,10 @@ class Game < ApplicationRecord
     # end
 
     def get_score 
+        self.game_questions.select {|gq| gq.correct == true}.count
     end 
 
     def game_over?
-        self.questions.count >= 10
+        self.questions.count > 10
     end 
 end

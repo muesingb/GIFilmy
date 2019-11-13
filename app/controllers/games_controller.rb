@@ -15,7 +15,6 @@ class GamesController < ApplicationController
         if @game.game_over?
             render :'games/game_over'
         else 
-            @game.questions << Question.all.sample
             render :'questions/show'
         end
     end
@@ -45,8 +44,14 @@ class GamesController < ApplicationController
     def show_answer
         @game_id = flash[:game].values.first
         @game = Game.find(@game_id)
-        @next_question = @game.questions.last.id
+
+        unless @game.game_over? 
+            @game.questions << Question.all.sample
+        end
+
+        @next_question = @game.questions[-1].id
         @question = flash[:question]
+
         render :'questions/answer'
     end
 
