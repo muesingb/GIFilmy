@@ -1,7 +1,7 @@
 <img src="<%= @question.first_gif %>" alt="a hilarious GIF" height="600" width="600">
 <img src="<%= @question.second_gif %>" alt="a hilarious GIF" height="600" width="600">
 <%= form_with(url: "/answer", method: "post") do %>
-    <%= text_field_tag "game[answer]" %><br />
+    <%= text_field_tag "game[answer]", nil, required: true %><br />
     <%= hidden_field_tag "game[game_id]", @game.id%>
     <%= hidden_field_tag "game[score]", @game.score%>
     <%= hidden_field_tag "question[title]", @question.title%>

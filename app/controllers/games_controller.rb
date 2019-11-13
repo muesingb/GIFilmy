@@ -13,9 +13,9 @@ class GamesController < ApplicationController
         @game = Game.find(params[:game_id])
         @question = @game.questions.find(params[:id])
         if @game.game_over?
+            @game.get_score
             render :'games/game_over'
         else 
-            @game.get_score
             render :'questions/show'
         end
     end
@@ -26,13 +26,10 @@ class GamesController < ApplicationController
         @game = Game.find(game_params[:game_id])
         @game_question = @game.game_questions.last
         @question = Question.find_by(title: question_params[:title])
+        
         @simple_answer = @question.simplify_title
-        
-        #complicated_answer = game_params.split(" ")
-        #stopwords = /\b(?:#{ %w[to and or the a in of].join('|') })\b/i
-        #user_answer_simple = complicated_answer.join(' ').gsub(stopwords, '').split.map {|word| word.downcase}
-        
-        if user_answer_simple == @simple_answer
+        @answer = (game_params[:answer].split(" ")).map {|word| word.downcase}
+        if @simple_answer.all? {|word| @answer.include?(word)}
             flash[:feedback] = "🎊Way to go!🎉"
             @game_question.update(correct: true)
         else flash[:feedback] = "NOPE sorry! 😢"
@@ -60,7 +57,9 @@ class GamesController < ApplicationController
     end
 
     def leaderboard
-        #@game_scores = (Game.all.map {|game| game.score}).sort.reverse
+        @game_scores = (Game.all.map {|game| game.score}).sort.reverse
+        # @users = 
+        # Hash[@users.zip(@game_scores)] 
     end
 
 private
