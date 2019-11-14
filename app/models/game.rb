@@ -3,10 +3,15 @@ class Game < ApplicationRecord
     has_many :questions, through: :game_questions
     belongs_to :user
 
-    def get_unique_question
-        question = Question.all.sample
+    def get_unique_question(game_genre)
+        if game_genre == "Random"
+            question = Question.all.sample
+        else
+            question = (Question.select {|question| question.genre == game_genre}).sample
+        end
+
         if self.questions.include?(question)
-            get_unique_question
+            get_unique_question(game_genre)
         else 
             self.questions << question
         end 

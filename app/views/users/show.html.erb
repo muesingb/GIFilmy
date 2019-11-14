@@ -4,5 +4,11 @@
 
 <%= form_with(url: "/games", method: "post") do %>
     <%= hidden_field_tag "user[user_id]", @user.id%>
-    <%= submit_tag("Start a new game?") %>
+    <select name="question[genre]">
+        <% Question.all_genres.each do |genre| %>
+            <option value="<%= genre %>"><%= genre %></option>
+        <% end %>
+        <option value="Random">Random</option>
+    </select>
+    <%= submit_tag("Start a new game") %>
 <% end %>

@@ -4,8 +4,13 @@ class GamesController < ApplicationController
     end
 
     def create
-        @game = Game.create(user_id: user_params[:user_id])
-        @game.questions << Question.all.sample
+        @game = Game.create(user_id: user_params[:user_id], genre: question_params[:genre])
+        if question_params[:genre] == "Random"
+            @game.questions << Question.all.sample
+        else
+            @genre = Question.select {|question| question.genre == question_params[:genre]}
+            @game.questions << @genre.sample
+        end
         redirect_to "/game/#{@game.id}/question/#{@game.questions.first.id}"
     end
 
@@ -45,9 +50,8 @@ class GamesController < ApplicationController
     def show_answer
         @game_id = flash[:game].values.first
         @game = Game.find(@game_id)
-
         unless @game.game_over? 
-            @game.get_unique_question   
+            @game.get_unique_question(@game.genre)
         end
 
         @next_question = @game.questions[-1].id
@@ -57,9 +61,9 @@ class GamesController < ApplicationController
     end
 
     def leaderboard
-        @game_scores = (Game.all.map {|game| game.score}).sort.reverse
-        # @users = 
-        # Hash[@users.zip(@game_scores)] 
+        @game_scores = (Game.all.map {|game| game.score})
+        @users = Game.all.map {|game| game.user.name}
+        @user_gamescores = (@game_scores.zip(@users)).sort.reverse
     end
 
 private
@@ -69,7 +73,7 @@ private
     end
 
     def question_params
-        params.require(:question).permit(:title, :question_id)
+        params.require(:question).permit(:title, :question_id, :genre)
     end
 
     def user_params

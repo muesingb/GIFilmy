@@ -7,4 +7,8 @@ class Question < ApplicationRecord
         stopwords = /\b(?:#{ %w[to and or the a in of].join('|') })\b/i
         clean_array = complicated_answer.join(' ').gsub(stopwords, '').split.map {|word| word.downcase}
     end
+
+    def self.all_genres
+        self.all.map {|question| question.genre }.uniq
+    end
 end

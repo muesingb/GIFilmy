@@ -1,2 +1,4 @@
 <h1>Top Scores:</h1>
-<%= @game_scores.first * 10 %>
+<% @user_gamescores[0..4].each do |game|%>
+    <%= game[1] %>: <%=(game[0]*20) %><br />
+<% end %>
