@@ -25,6 +25,17 @@ Question.create(title: "Groundhog Day", genre: "Comedy", first_gif: "https://med
 Question.create(title: "Wayne's World", genre: "Comedy", first_gif: "https://media.giphy.com/media/l41lZccR1oUigYeNa/giphy.gif", second_gif: "https://media.giphy.com/media/euwvytHJqMG21wSkI4/giphy.gif")
 Question.create(title: "Home Alone", genre: "Comedy", first_gif: "https://media.giphy.com/media/l0IylQoMkcbZUbtKw/giphy.gif", second_gif: "https://media.giphy.com/media/gKW26O7cU2JDG/giphy.gif")
 Question.create(title: "School of Rock", genre: "Comedy", first_gif: "https://media.giphy.com/media/j39AzlvlJqE7e/giphy.gif", second_gif: "https://media.giphy.com/media/QLvRBqfLXCphu/giphy.gif")
+Question.create(title: "Star Trek", genre: "Science Fiction", first_gif: "https://media.giphy.com/media/l1J3rGigrYfx8aKqI/giphy.gif", second_gif: "https://media.giphy.com/media/QM8d5Zx9G5gLhDNJYc/giphy.gif")
+Question.create(title: "Jurassic Park", genre: "Science Fiction", first_gif: "https://media.giphy.com/media/qN9x0UIc0Rhg4/giphy.gif", second_gif: "https://media.giphy.com/media/l378esHHoBQ8S9c9a/giphy.gif")
+Question.create(title: "Blade Runner", genre: "Science Fiction", first_gif: "https://media.giphy.com/media/1ludrxHRnUmT6/giphy.gif", second_gif: "https://media.giphy.com/media/l0HlLlCU434c3egNy/giphy.gif")
+Question.create(title: "RoboCop", genre: "Science Fiction", first_gif: "https://media.giphy.com/media/tczJoRU7XwBS8/giphy.gif", second_gif: "https://media.giphy.com/media/81xwEHX23zhvy/giphy.gif")
+Question.create(title: "Back to the Future", genre: "Science Fiction", first_gif: "https://media.giphy.com/media/dXjQIUyWbkQPSVidcF/giphy.gif", second_gif: "https://media.giphy.com/media/ywdAIxqBkyXHq/giphy.gif")
+Question.create(title: "The Little Mermaid", genre: "Animated", first_gif: "https://media.giphy.com/media/1URktmTTAIflh6VLUL/giphy.gif", second_gif: "https://media.giphy.com/media/yrNBsUzUm2Eyk/giphy.gif")
+Question.create(title: "Toy Story", genre: "Animated", first_gif: "https://media.giphy.com/media/12ttoBXEqixfmo/giphy.gif", second_gif: "https://media.giphy.com/media/WoWm8YzFQJg5i/giphy.gif")
+Question.create(title: "The Lion King", genre: "Animated", first_gif: "https://media.giphy.com/media/ZkBcyGcNwNUUU/giphy.gif", second_gif: "https://media.giphy.com/media/eoN5fHRfV4sSI/giphy.gif")
+Question.create(title: "Chicken Run", genre: "Animated", first_gif: "https://media.giphy.com/media/Zg7clvqHE3CdW/giphy.gif", second_gif: "https://media.giphy.com/media/7kn27lnYSAE9O/giphy.gif")
+Question.create(title: "The Nightmare Before Christmas", genre: "Animated", first_gif: "https://media.giphy.com/media/KFOqUTRI8H26s/giphy.gif", second_gif: "https://media.giphy.com/media/MrxXXBriEIKBO/giphy.gif")
+
 
 #Games
 Game.create(user_id: 1)
@@ -53,3 +64,7 @@ GameQuestion.create(question_id: 17, game_id: 2, correct: false)
 GameQuestion.create(question_id: 18, game_id: 2, correct: false)
 GameQuestion.create(question_id: 19, game_id: 2, correct: false)
 GameQuestion.create(question_id: 20, game_id: 2, correct: false)
+
+#Game 3: Sci-Fi
+GameQuestion.create(question_id: 21, game_id: 3, correct: true)
+
