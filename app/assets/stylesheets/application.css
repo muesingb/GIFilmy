@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+footer {
+    text-align: center;
+    color: black;
+    font: bold 40px Courier New, serif;
+    text-shadow: none;
+}

@@ -1,14 +1,24 @@
-<h2>Name: <%= @user.name %></h2>
-<h2>Favorite Movie: <%= @user.favorite_movie %></h2>
-<h2>Gif That Best Represents You: <p><img src="<%= @user.gif_that_represents_you %>" alt="" height="600" width="600"></p> 
+<h1><%= @user.name %></h1>
+<h2>Favorite Movie: <%= @user.favorite_movie %></h2><br>
+<h2 id="user_gif">GIF That Best Represents You <p id="gif"><img src="<%= @user.gif_that_represents_you %>" alt="" height="600" width="600"></p> 
+
+<% if @user.user_highest_score %>
+    <h2 class="label">Your Best Game</h2>
+    <p class="smaller">Score:<%= ((@user.user_highest_score)[0])%></p>
+    <p class="smaller">Genre:<%= ((@user.user_highest_score)[1])%></p><br />
+<% end %>
 
 <%= form_with(url: "/games", method: "post") do %>
     <%= hidden_field_tag "user[user_id]", @user.id%>
-    <select name="question[genre]">
+    <p class="label">Start a New Game</p>
+    <p id="genre">Select a Genre:</p>
+    <select class ="button" name="question[genre]">
         <% Question.all_genres.each do |genre| %>
             <option value="<%= genre %>"><%= genre %></option>
         <% end %>
         <option value="Random">Random</option>
     </select>
-    <%= submit_tag("Start a new game") %>
+    <%= submit_tag("Start a new game", :class => "button") %>
 <% end %>
+<br>
+<%= link_to "Back to Users", users_path, :class => "button" %><br><br>

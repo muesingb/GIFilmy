@@ -12,4 +12,10 @@ class User < ApplicationRecord
       hashed = BCrypt::Engine::hash_secret(password, salt)
       return nil unless (salt + hashed) == self.password_digest
     end
+
+    def user_highest_score
+        @scores = self.games.map {|game| game.score}
+        @genres = self.games.map {|game| game.genre}
+        @user_highest_score = (@scores.zip(@genres)).sort.reverse.first
+    end
 end

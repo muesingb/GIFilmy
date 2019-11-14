@@ -1,7 +1,8 @@
-<h1> Our GiFavorite GiFilmers </h1>
+<h1> Our GIFavorite GIFilmers </h1>
 
 <% @users.each do |user| %>
-<p><%= link_to user.name, user_path(user) %></p>
+<p><%= link_to submit_tag(user.name, class: "user_button"), user_path(user)%></p>
 <% end %>
 
-<%= link_to submit_tag("Create a New User"), new_user_path %>
+<%= link_to submit_tag("Create a New User", class: "button"), new_user_path %><br /><br />
+<%= link_to submit_tag("Top Scores", class: "button"), '/users/leaderboard' %>
