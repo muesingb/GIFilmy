@@ -35,7 +35,21 @@ Question.create(title: "Toy Story", genre: "Animated", first_gif: "https://media
 Question.create(title: "The Lion King", genre: "Animated", first_gif: "https://media.giphy.com/media/ZkBcyGcNwNUUU/giphy.gif", second_gif: "https://media.giphy.com/media/eoN5fHRfV4sSI/giphy.gif")
 Question.create(title: "Chicken Run", genre: "Animated", first_gif: "https://media.giphy.com/media/Zg7clvqHE3CdW/giphy.gif", second_gif: "https://media.giphy.com/media/7kn27lnYSAE9O/giphy.gif")
 Question.create(title: "The Nightmare Before Christmas", genre: "Animated", first_gif: "https://media.giphy.com/media/KFOqUTRI8H26s/giphy.gif", second_gif: "https://media.giphy.com/media/MrxXXBriEIKBO/giphy.gif")
-
+Question.create(title: "Yellow Submarine", genre: "Animated", first_gif: "https://media.giphy.com/media/jsf04DJtj5ZMAl4g9m/giphy.gif", second_gif: "https://media.giphy.com/media/MwWSXAPG8g7GU/giphy.gif")
+Question.create(title: "A Chorus Line", genre: "Musical", first_gif: "https://media.giphy.com/media/WgOcyQMENRVfLMLIUj/giphy.gif", second_gif: "https://media.giphy.com/media/l2SpXooHKDShYUyeQ/giphy.gif")
+Question.create(title: "Fiddler on the Roof", genre: "Musical", first_gif: "https://media.giphy.com/media/ICfBtjgl5gSXK/giphy.gif", second_gif: "https://media.giphy.com/media/a7oVsf3WTOaoE/giphy.gif")
+Question.create(title: "West Side Story", genre: "Musical", first_gif: "https://media.giphy.com/media/LKqDgLlK6SuIM/giphy.gif", second_gif: "https://media.giphy.com/media/34ZNcoaN5u4hi/giphy.gif")
+Question.create(title: "Little Shop of Horrors", genre: "Musical", first_gif: "https://media.giphy.com/media/RLJk7R3mvmawWdjmCq/giphy.gif", second_gif: "https://media.giphy.com/media/BWR0X5Wp4uZiBb1Ddq/giphy.gif")
+Question.create(title: "Pan's Labyrinth", genre: "Fantasy", first_gif: "https://media.giphy.com/media/Ah2s5ISR3jnsmhbocz/giphy.gif", second_gif: "https://media.giphy.com/media/Pchs8AT2HpTUI/giphy.gif")
+Question.create(title: "The Princess Bride", genre: "Fantasy", first_gif: "https://media.giphy.com/media/p4gPC9wMVLfG0/giphy.gif", second_gif: "https://media.giphy.com/media/I6px8ejjBGXny/giphy.gif")
+Question.create(title: "Edward Scissorhands", genre: "Fantasy", first_gif: "https://media.giphy.com/media/iFZQtnkTYq0Le/giphy.gif", second_gif: "https://media.giphy.com/media/SwC7zuBPx1vUNXAoGm/giphy.gif")
+Question.create(title: "Willy Wonka and the Chocolate Factory", genre: "Fantasy", first_gif: "https://media.giphy.com/media/xGasYNhkgRvJ6/giphy.gif", second_gif: "https://media.giphy.com/media/1wQbGbrJMytXOOXnkp/giphy.gif")
+Question.create(title: "Harry Potter", genre: "Fantasy", first_gif: "https://media.giphy.com/media/xowbqCc2wcrC0/giphy.gif", second_gif: "https://media.giphy.com/media/bLcMOxvIak4iZieaut/giphy.gif")
+Question.create(title: "Eternal Sunshine of the Spotless Mind", genre: "Dramedy", first_gif: "https://media.giphy.com/media/sKYkLv7TioLv2/giphy.gif", second_gif: "https://media.giphy.com/media/l41m04gr7tRet7Uas/giphy.gif")
+Question.create(title: "Birdman", genre: "Dramedy", first_gif: "https://media.giphy.com/media/B81XkL3dtnWTe/giphy.gif", second_gif: "https://media.giphy.com/media/13l8PPJVkf8szC/giphy.gif")
+Question.create(title: "Lady Bird", genre: "Dramedy", first_gif: "https://media.giphy.com/media/3o7TKxKvPeSlXhrKSs/giphy.gif", second_gif: "https://media.giphy.com/media/vmGJdiqLTG4lq/giphy.gif")
+Question.create(title: "Dead Poets Society", genre: "Dramedy", first_gif: "https://media.giphy.com/media/3otPowxHIzVT4XP8Bi/giphy.gif", second_gif: "https://media.giphy.com/media/l0HlTxlylt9vtixi0/giphy.gif")
+Question.create(title: "Garden State", genre: "Dramedy", first_gif: "https://media.giphy.com/media/l46C5H1DhJxEuJkyY/giphy.gif", second_gif: "https://media.giphy.com/media/rqRRLgj0rFNJK/giphy.gif")
 
 #Games
 Game.create(user_id: 1)
