@@ -8,6 +8,7 @@
     <p class="smaller">Genre:<%= ((@user.user_highest_score)[1])%></p><br />
 <% end %>
 
+<% if @user.name == session[:username] %>
 <%= form_with(url: "/games", method: "post") do %>
     <%= hidden_field_tag "user[user_id]", @user.id%>
     <p class="label">Start a New Game</p>
@@ -22,3 +23,4 @@
 <% end %>
 <br>
 <%= link_to "Back to Users", users_path, :class => "button" %><br><br>
+
