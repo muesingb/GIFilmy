@@ -1,5 +1,5 @@
 <h1>Thanks for playing!</h1>
 <h2>Total Score: <%= @game.score * 20 %></h2>
 
-<%= link_to submit_tag("Back to Users"), users_path %>
-<%= link_to submit_tag("LeaderBoard"), '/users/leaderboard' %>
+<%= link_to submit_tag("Back to Profile", class: "button"), user_path(@game.user) %>
+<%= link_to submit_tag("LeaderBoard", class: "button"), '/users/leaderboard' %>

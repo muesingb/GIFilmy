@@ -1,3 +1,106 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+body {
+    background: url('./background gifilmy.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-color: black;
+    color: black;
+    font: bold 30px/20px Courier New, serif;
+    text-shadow: 1px 1px 10px whitesmoke;
+  }
+
+#gif {
+      text-align: center;
+  }
+
+  h1 {
+    color: black;
+    font: bold 80px/50px Courier New, serif;
+    text-shadow: 1px 1px 5px whitesmoke;
+    text-decoration: underline overline;
+  }
+
+  .button {
+    background-color: #6b0d63; 
+    border: none;
+    color: white;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    font: 30px/20px Courier New, serif;
+    font-size: 20px; 
+    border-radius: 25px;
+    text-align: center;
+  }
+
+  #genre {
+    color: black;
+    font: 15px/1px Courier New, serif;
+    text-shadow: 1px 1px 10px whitesmoke;
+    text-align: center;
+  }
+
+  .label {
+    color: black;
+    font: bold 30px/20px Courier New, serif;
+    text-shadow: 1px 1px 10px whitesmoke;
+    text-decoration: underline overline;
+    text-align: center;
+  }
+
+  .smaller {
+    color: black;
+    font: bold 20px/20px Courier New, serif;
+    text-shadow: 1px 1px 10px whitesmoke;
+    text-align: center;
+  }
+
+  #user_gif {
+    color: black;
+    font: bold 30px/20px Courier New, serif;
+    text-shadow: 1px 1px 10px whitesmoke;
+    text-align: center;
+  }
+
+  .question_text_field {
+    text-align: center;
+    border-radius: 25px;
+    border: 2px solid #6b0d63;
+    padding: 20px;
+    width: 200px;
+    height: 10px;
+    }
+
+    .login_text_field {
+        text-align: center;
+        border-radius: 25px;
+        border: 2px solid #6b0d63;
+        padding: 13px;
+        width: 150px;
+        height: 1px;
+    }
+
+#first_gif {
+    border-radius: 25px;
+}
+
+#second_gif {
+    border-radius: 25px;
+}
+
+.user_button {
+    background-color: #fdfdfd; 
+    border: none;
+    color: #6b0d63;
+    padding: 1px 10px;
+    text-align: center;
+    text-decoration: none;
+    font: 30px/20px Courier New, serif;
+    font-size: 20px; 
+    border-radius: 5px;
+    text-align: center;
+}

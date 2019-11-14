@@ -35,9 +35,9 @@ class GamesController < ApplicationController
         @simple_answer = @question.simplify_title
         @answer = (game_params[:answer].split(" ")).map {|word| word.downcase}
         if @simple_answer.all? {|word| @answer.include?(word)}
-            flash[:feedback] = "🎊Way to go!🎉"
+            flash[:feedback] = "🎊RIGHT! Way to go!🎉"
             @game_question.update(correct: true)
-        else flash[:feedback] = "NOPE sorry! 😢"
+        else flash[:feedback] = "WRONG! sorry! 😢"
         end
 
         flash[:correct] = question_params[:title]

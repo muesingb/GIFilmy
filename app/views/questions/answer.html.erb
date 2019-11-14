@@ -1,7 +1,7 @@
-<h1><%= flash[:correct] %></h1>
-<h2><%= flash[:feedback] %></h2>
+<h2>The Answer is...</h2><h1><%= flash[:correct] %></h1>
+<h3>You got it: <%= flash[:feedback] %></h3>
 
-<img src="<%=@question.values.third%>" alt="a hilarious GIF" height="600" width="600">
-<img src="<%=@question.values.fourth%>" alt="a hilarious GIF" height="600" width="600">
+<img id="first_gif" src="<%=@question.values.third%>" alt="a hilarious GIF" height="600" width="600">
+<img id="second_gif" src="<%=@question.values.fourth%>" alt="a hilarious GIF" height="600" width="600">
 <br /><br />    
-<%= link_to submit_tag("Continue"), "/game/#{@game_id}/question/#{@next_question}" %>
+<%= link_to submit_tag("Continue", class: "button"), "/game/#{@game_id}/question/#{@next_question}" %>
