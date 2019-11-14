@@ -51,34 +51,36 @@ Question.create(title: "Lady Bird", genre: "Dramedy", first_gif: "https://media.
 Question.create(title: "Dead Poets Society", genre: "Dramedy", first_gif: "https://media.giphy.com/media/3otPowxHIzVT4XP8Bi/giphy.gif", second_gif: "https://media.giphy.com/media/l0HlTxlylt9vtixi0/giphy.gif")
 Question.create(title: "Garden State", genre: "Dramedy", first_gif: "https://media.giphy.com/media/l46C5H1DhJxEuJkyY/giphy.gif", second_gif: "https://media.giphy.com/media/rqRRLgj0rFNJK/giphy.gif")
 
-#Games
-Game.create(user_id: 1)
-Game.create(user_id:1) 
 
-#Game 1
-GameQuestion.create(question_id: 1, game_id: 1, correct: true)
-GameQuestion.create(question_id: 2, game_id: 1, correct: true)
-GameQuestion.create(question_id: 3, game_id: 1, correct: true)
-GameQuestion.create(question_id: 4, game_id: 1, correct: true)
-GameQuestion.create(question_id: 5, game_id: 1, correct: true)
-GameQuestion.create(question_id: 6, game_id: 1, correct: true)
-GameQuestion.create(question_id: 7, game_id: 1, correct: true)
-GameQuestion.create(question_id: 8, game_id: 1, correct: true)
-GameQuestion.create(question_id: 9, game_id: 1, correct: true)
-GameQuestion.create(question_id: 10, game_id: 1, correct: true)
+# #Games
+# Game.create(user_id: 1)
+# Game.create(user_id:1) 
 
-#Game 2
-GameQuestion.create(question_id: 11, game_id: 2, correct: true)
-GameQuestion.create(question_id: 12, game_id: 2, correct: false)
-GameQuestion.create(question_id: 13, game_id: 2, correct: false)
-GameQuestion.create(question_id: 14, game_id: 2, correct: false)
-GameQuestion.create(question_id: 15, game_id: 2, correct: false)
-GameQuestion.create(question_id: 16, game_id: 2, correct: false)
-GameQuestion.create(question_id: 17, game_id: 2, correct: false)
-GameQuestion.create(question_id: 18, game_id: 2, correct: false)
-GameQuestion.create(question_id: 19, game_id: 2, correct: false)
-GameQuestion.create(question_id: 20, game_id: 2, correct: false)
 
-#Game 3: Sci-Fi
-GameQuestion.create(question_id: 21, game_id: 3, correct: true)
+# #Game 1
+# GameQuestion.create(question_id: 1, game_id: 1, correct: true)
+# GameQuestion.create(question_id: 2, game_id: 1, correct: true)
+# GameQuestion.create(question_id: 3, game_id: 1, correct: true)
+# GameQuestion.create(question_id: 4, game_id: 1, correct: true)
+# GameQuestion.create(question_id: 5, game_id: 1, correct: true)
+# GameQuestion.create(question_id: 6, game_id: 1, correct: true)
+# GameQuestion.create(question_id: 7, game_id: 1, correct: true)
+# GameQuestion.create(question_id: 8, game_id: 1, correct: true)
+# GameQuestion.create(question_id: 9, game_id: 1, correct: true)
+# GameQuestion.create(question_id: 10, game_id: 1, correct: true)
+
+# #Game 2
+# GameQuestion.create(question_id: 11, game_id: 2, correct: true)
+# GameQuestion.create(question_id: 12, game_id: 2, correct: false)
+# GameQuestion.create(question_id: 13, game_id: 2, correct: false)
+# GameQuestion.create(question_id: 14, game_id: 2, correct: false)
+# GameQuestion.create(question_id: 15, game_id: 2, correct: false)
+# GameQuestion.create(question_id: 16, game_id: 2, correct: false)
+# GameQuestion.create(question_id: 17, game_id: 2, correct: false)
+# GameQuestion.create(question_id: 18, game_id: 2, correct: false)
+# GameQuestion.create(question_id: 19, game_id: 2, correct: false)
+# GameQuestion.create(question_id: 20, game_id: 2, correct: false)
+
+# #Game 3: Sci-Fi
+# GameQuestion.create(question_id: 21, game_id: 3, correct: true)
 

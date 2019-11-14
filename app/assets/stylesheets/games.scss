@@ -1,7 +1,30 @@
 // Place all the styles related to the GameQuestions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-body {
+/*!
+ * Start Bootstrap - The Big Picture (https://startbootstrap.com/template-overviews/the-big-picture)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-the-big-picture/blob/master/LICENSE)
+ */
+ body {
+    background: url('https://image.freepik.com/free-photo/crop-clapperboard-black-background_23-2147698844.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
     background-color: black;
     color: whitesmoke;
-}
+  }
+
+  .button {
+    background-color: #6b0d63; 
+    border: none;
+    color: white;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    font: 30px/20px Courier New, serif;
+    font-size: 20px; 
+    border-radius: 25px;
+    text-align: center;
+  }

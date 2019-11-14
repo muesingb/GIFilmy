@@ -1,4 +1,4 @@
-<h1>Welcome to GIFilmy! Ready to watch some GIFilms?</h1>
-<p><%= link_to submit_tag("Create a Profile to Play!"), new_user_path %></p>
-<p><%= link_to submit_tag("Already Have an Account? Log in!"), login_path %></p> 
-<p><%= link_to submit_tag("See Existing Users"), users_path %></p> 
+<h2>Welcome to GIFilmy! Ready to watch some GIFilms?</h2>
+<p><%= link_to submit_tag("Create a Profile to Play!", :class => "button"), new_user_path %></p>
+<p><%= link_to submit_tag("Already Have an Account? Log in!", :class => "button"), login_path %></p> 
+<p><%= link_to submit_tag("See Existing Users", :class => "button"), users_path %></p> 
