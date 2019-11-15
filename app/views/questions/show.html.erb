@@ -1,11 +1,12 @@
-<h2>Guess that Movie!</h2>
-<img id="first_gif" src="<%= @question.first_gif %>" alt="a hilarious GIF" height="600" width="600">
-<img id="second_gif" src="<%= @question.second_gif %>" alt="a hilarious GIF" height="600" width="600"><br><br>
-<%= form_with(url: "/answer", method: "post") do %>
-    <%= text_field_tag "game[answer]", nil, required: true, class: "question_text_field" %><br />
+<h2 style= "text-align:center;" >Guess that Movie!</h2>
+<img style = "position:relative; left:80px;" id="first_gif" src="<%= @question.first_gif %>" alt="a hilarious GIF" height="600" width="600">
+<img style = "position:relative; left:120px;" id="second_gif" src="<%= @question.second_gif %>" alt="a hilarious GIF" height="600" width="600"><br><br><br><br>
+<div class="gif"><%= form_with(url: "/answer", method: "post") do %>
+    <%= text_field_tag "game[answer]", nil, required: true, autocomplete: "off", class: "question_text_field" %><br />
     <%= hidden_field_tag "game[game_id]", @game.id%>
     <%= hidden_field_tag "game[score]", @game.score%>
     <%= hidden_field_tag "question[title]", @question.title%>
     <%= hidden_field_tag "question[question_id]", @question.id%><br>
     <%= submit_tag("Answer", class: "button") %>
 <% end %>
+</div><br><br>

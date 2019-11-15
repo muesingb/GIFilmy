@@ -1,13 +1,13 @@
 <h2>Create an account and get GIFilming!</h2>
 <%= form_for @user do |f| %>
   <%= f.label :name %>:
-  <%= f.text_field :name, required: true, :class => 'login_text_field' %><br /><br />
+  <%= f.text_field :name, required: true, autocomplete: "off", :class => 'login_text_field' %><br /><br />
 
   <%= f.label "Favorite Movie" %>:
-  <%= f.text_field :favorite_movie, required: true, :class => 'login_text_field' %><br /><br />
+  <%= f.text_field :favorite_movie, required: true, autocomplete: "off", :class => 'login_text_field' %><br /><br />
   
   GIF that represents you:
-  <%= f.text_field :gif_that_represents_you, required: true, :class => 'login_text_field' %><br /><br />
+  <%= f.text_field :gif_that_represents_you, required: true, autocomplete: "off", :class => 'login_text_field' %><br /><br />
 
   <!--<%= f.label :password %>:
   <%= f.password_field :password %><br />
@@ -15,5 +15,7 @@
   <%= f.label :password %>:
   <%= f.password_field :password_confirmation %><br />-->
 
-  <%= f.submit "Create User", :class => 'button'%>
-<% end %>
+  <%= f.submit "Create User", :class => 'button' %>
+
+<% end %><br><br><br><br><br>
+<%= link_to submit_tag("Back to Home", class: "button"), '/games' %>
