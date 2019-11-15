@@ -1,4 +1,5 @@
-<h1>Leaderboard</h1>
-<% @user_gamescores[0..4].each do |game|%>
+<h1 style="text-align: center;">Leaderboard</h1>
+<p style="text-align: center;"><% @user_gamescores[0..4].each do |game|%>
     <%= game[1] %>: <%=(game[0]*20) %><br /><br />
-<% end %>
+<% end %></p>
+<p style="text-align: center;"><%= link_to submit_tag("Back to Home", class: "button"), '/games' %></p>
