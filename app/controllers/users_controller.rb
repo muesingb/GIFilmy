@@ -12,6 +12,7 @@ class UsersController < ApplicationController
     end
 
     def create
+        session[:username] = user_params[:name] 
         @user = User.create(user_params)
         redirect_to user_path(@user)
     end
