@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
 
     def destroy
       session.delete :username
+      redirect_to :controller => :games, :action => "intro"
     end
 end
 

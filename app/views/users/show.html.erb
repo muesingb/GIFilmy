@@ -22,7 +22,10 @@
             <option value="Random">Random</option>
         </select>
         <%= submit_tag("Start a new game", :class => "button") %>
-    <% end %>
+    <% end %><br><br>
+    <%= button_to "Logout", {:controller => :sessions,
+      :action => 'destroy', :id => @user.id }, :id => "nohalo_button" %>
 <% end %></div><br><br>
 <br>
-<%= link_to "Back to Users", users_path, :id => "nohalo_button" %><br><br><br>
+<%= link_to "Back to Users", users_path, :id => "nohalo_button" %><br><br>
+
