@@ -12,7 +12,7 @@
 <% if @user.name == session[:username] %>
     <%= form_with(url: "/games", method: "post") do %>
         <%= hidden_field_tag "user[user_id]", @user.id%>
-        <p class="label">Start a New Game</p>
+        <p class="label">New Game</p>
         <p id="genre">Select a Genre:</p>
         <div class="gif">
         <select class ="button" name="question[genre]">
@@ -21,7 +21,7 @@
             <% end %>
             <option value="Random">Random</option>
         </select>
-        <%= submit_tag("Start a new game", :class => "button") %>
+        <%= submit_tag("Start", :class => "button") %>
     <% end %><br><br>
     <%= button_to "Logout", {:controller => :sessions,
       :action => 'destroy', :id => @user.id }, :id => "nohalo_button" %>
