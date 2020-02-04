@@ -1,25 +1,21 @@
-# README
+# GIFilmy
+> Web game where player guesses movie titles based on GIFs.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Watch the Demo](https://www.youtube.com/watch?v=tpbo1VQkkiE&feature=youtu.be)
 
-Things you may want to cover:
+<ul>
+  <li />Tracks current user through Rails sessions, adjusting leaderboard after each completed game.<br>
+  <li />Applied Model-View-Controller (MVC) modeling to enhance code flow.<br>
+</ul>
 
-* Ruby version
+Technologies:
+<ul>
+  <li />Ruby on Rails
+  <li />HTML/CSS/JS
+</ul>
 
-* System dependencies
+## Meta
 
-* Configuration
+Barbara Muesing – [LinkedIn](https://www.linkedin.com/in/barbara-muesing) – muesingb@gmail.com
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# gifgame
+[https://github.com/muesingb/gifgame](https://github.com/muesingb/gifgame)
