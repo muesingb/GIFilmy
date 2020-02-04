@@ -18,4 +18,4 @@ Technologies:
 
 Barbara Muesing – [LinkedIn](https://www.linkedin.com/in/barbara-muesing) – muesingb@gmail.com
 
-[https://github.com/muesingb/gifgame](https://github.com/muesingb/gifgame)
+[https://github.com/muesingb/GIFilmy](https://github.com/muesingb/GIFilmy)
