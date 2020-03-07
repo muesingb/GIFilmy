@@ -52,7 +52,7 @@ Question.create(title: "Dead Poets Society", genre: "Dramedy", first_gif: "https
 Question.create(title: "Garden State", genre: "Dramedy", first_gif: "https://media.giphy.com/media/l46C5H1DhJxEuJkyY/giphy.gif", second_gif: "https://media.giphy.com/media/rqRRLgj0rFNJK/giphy.gif")
 
 
-# #Games
+# #test games
 # Game.create(user_id: 1)
 # Game.create(user_id:1) 
 

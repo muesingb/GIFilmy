@@ -5,12 +5,15 @@ class GamesController < ApplicationController
 
     def create
         @game = Game.create(user_id: user_params[:user_id], genre: question_params[:genre])
-        if question_params[:genre] == "Random"
-            @game.questions << Question.all.sample
-        else
-            @genre = Question.select {|question| question.genre == question_params[:genre]}
-            @game.questions << @genre.sample
-        end
+        # if question_params[:genre] == "Random"
+        #     @game.questions << Question.all.sample
+        # else
+        #     @genre = Question.select {|question| question.genre == question_params[:genre]}
+        #     @game.questions << @genre.sample
+        # end
+
+        @game.get_unique_question(@game.genre)
+
         redirect_to "/game/#{@game.id}/question/#{@game.questions.first.id}"
     end
 
