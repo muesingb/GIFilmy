@@ -5,7 +5,7 @@
 
 <% if @user.user_highest_score %>
     <h2 class="label">Best Game</h2>
-    <p class="smaller">Score:<%= ((@user.user_highest_score)[0])%></p>
+    <p class="smaller">Score:<%= ((@user.user_highest_score)[0]) *20 %></p>
     <p class="smaller">Genre:<%= ((@user.user_highest_score)[1])%></p><br />
 <% end %>
 
