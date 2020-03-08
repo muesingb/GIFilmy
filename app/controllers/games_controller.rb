@@ -47,9 +47,7 @@ class GamesController < ApplicationController
     end
 
     def leaderboard
-        @game_scores = (Game.all.map {|game| game.score})
-        @users = Game.all.map {|game| game.user.name}
-        @user_gamescores = (@game_scores.zip(@users)).sort.reverse
+        @user_gamescores = Game.leaderboard
     end
 
     def end_game

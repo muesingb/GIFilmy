@@ -26,6 +26,15 @@ class Game < ApplicationRecord
 
     def game_over? #each game has 5 questions
         self.questions.count > 2
-    end 
+    end
+
+    def self.leaderboard
+        #get array of all game scores
+        @game_scores = (Game.all.map {|game| game.score * 20})
+        #get array of all users
+        @users = Game.all.map {|game| game.user.name}
+        #matches up game scores array to corresponding users array. i.e. [[80, "Barbara"], [20, "Brad"]]
+        (@game_scores.zip(@users)).sort.reverse[0..4]
+    end
 end
    
