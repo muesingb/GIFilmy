@@ -2,13 +2,12 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: 'games#intro'
   
-  #users routes. Fix this to be in user's controller
+  #users routes. Fix this to be in user's controller. Right now needs to be above user routes in order to work.
   get '/users/leaderboard', to: 'games#leaderboard'
   
   resources :users 
   resources :games
   resources :questions
-
 
   #games routes
   post '/answer', to: 'games#answer'
@@ -16,7 +15,7 @@ Rails.application.routes.draw do
   get '/game/:game_id/end', to: 'games#end_game'
   
   #game_questions routes
-  get '/game/:game_id/question/:id', to: 'game_questions#show'
+  get '/game/:game_id/question/:id', to: 'questions#show'
   
   #sessions/login routes
   get '/login', to: 'sessions#new'
