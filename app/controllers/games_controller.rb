@@ -4,28 +4,11 @@ class GamesController < ApplicationController
     end
 
     def create
+        #create a new game and add the first question
         @game = Game.create(user_id: user_params[:user_id], genre: question_params[:genre])
-        # if question_params[:genre] == "Random"
-        #     @game.questions << Question.all.sample
-        # else
-        #     @genre = Question.select {|question| question.genre == question_params[:genre]}
-        #     @game.questions << @genre.sample
-        # end
-
         @game.get_unique_question(@game.genre)
 
         redirect_to "/game/#{@game.id}/question/#{@game.questions.first.id}"
-    end
-
-    def game_questions
-        @game = Game.find(params[:game_id])
-        @question = @game.questions.find(params[:id])
-        if @game.game_over?
-            @game.get_score
-            render :'games/game_over'
-        else 
-            render :'questions/show'
-        end
     end
 
     def answer
@@ -67,6 +50,14 @@ class GamesController < ApplicationController
         @game_scores = (Game.all.map {|game| game.score})
         @users = Game.all.map {|game| game.user.name}
         @user_gamescores = (@game_scores.zip(@users)).sort.reverse
+    end
+
+    def end_game
+        @game = Game.find(params[:game_id])
+
+        #add that if game score is not highest score of player or in leaderboard, delete
+
+        render :'games/game_over'
     end
 
 private
