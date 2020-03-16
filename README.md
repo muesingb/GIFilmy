@@ -15,7 +15,7 @@ Technologies:
 </ul>
 
 Domain Model
-![Domain Model for GIFilmy](https://imgur.com/F4Whvl4)
+![Domain Model for GIFilmy](https://i.imgur.com/F4Whvl4.png)
 
 ## Meta
 
