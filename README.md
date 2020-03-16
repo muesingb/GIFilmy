@@ -14,6 +14,9 @@ Technologies:
   <li />HTML/CSS
 </ul>
 
+Domain Model
+![Domain Model for GIFilmy](https://imgur.com/F4Whvl4)
+
 ## Meta
 
 Barbara Muesing – [LinkedIn](https://www.linkedin.com/in/barbara-muesing) – muesingb@gmail.com
