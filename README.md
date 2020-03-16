@@ -14,7 +14,6 @@ Technologies:
   <li />HTML/CSS
 </ul>
 
-Domain Model
 ![Domain Model for GIFilmy](https://i.imgur.com/F4Whvl4.png)
 
 ## Meta
